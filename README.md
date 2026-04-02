@@ -1,23 +1,31 @@
 # BFL CDN Console 🚀
-This repository serves as a personal Content Delivery Network (CDN) for hosting static assets using **jsDelivr**.
+This repository hosts static assets for **Brieflyne**. Large files (over 50MB) are served via GitHub Raw, and smaller assets can still use jsDelivr.
 
+## 📂 Folder Structure
+- `/assets/client-review/`: Client video testimonials and reviews.
+- `/assets/images/`: Logos and UI elements.
+- `/assets/js/` & `/assets/css/`: Development scripts and styles.
 
-## 🔗 CDN Link Format
-To access files from this repository, use the following URL format:
+## 🔗 CDN & Direct Access Links
 
-### 1. Latest Version (Main Branch)
-`https://cdn.jsdelivr.net/gh/[YourUsername]/bfl-cdn-consol/path/to/file`
+### 1. Large Files (>50MB) - GitHub Raw
+Use this for high-quality videos or large assets:
+`https://raw.githubusercontent.com/ghlstyle/bfl-cdn-consol/main/path/to/file`
 
-### 2. Specific Version/Tag
-`https://cdn.jsdelivr.net/gh/[YourUsername]/bfl-cdn-consol@1.0.0/path/to/file`
+**Example (Video):**
+`https://raw.githubusercontent.com/ghlstyle/bfl-cdn-consol/main/assets/client-review/Brieflyne_Review_1_o7jw90.mp4`
+
+### 2. Small Assets (<50MB) - jsDelivr
+Use this for images, CSS, and JS (better caching):
+`https://cdn.jsdelivr.net/gh/ghlstyle/bfl-cdn-consol/path/to/file`
 
 ---
 
-## 🛠️ How to use
-1. Upload your file to the `assets/` folder.
-2. Replace `[YourUsername]` with your GitHub username in the link below.
-3. Use the link directly in your HTML/CSS.
+## 🛠️ Usage in Code
 
-**Example for an Image:**
+### Video Implementation (HTML5)
 ```html
-<img src="[https://cdn.jsdelivr.net/gh/](https://cdn.jsdelivr.net/gh/)[YourUsername]/bfl-cdn-consol/assets/images/sample.png" alt="Sample">
+<video width="100%" controls preload="metadata">
+  <source src="[https://raw.githubusercontent.com/ghlstyle/bfl-cdn-consol/main/assets/client-review/Brieflyne_Review_1_o7jw90.mp4](https://raw.githubusercontent.com/ghlstyle/bfl-cdn-consol/main/assets/client-review/Brieflyne_Review_1_o7jw90.mp4)" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
